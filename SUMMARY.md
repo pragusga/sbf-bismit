@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-* [HTML,CSS](README.md)
-* [Git and environment](README.md)
-* [Django - Url, Views](README.md)
-* [Django - models](README.md)
-* [Django - forms](README.md)
-* [Deployment](README.md)
+* [HTML,CSS](HTML.md)
+* [Git and environment](GIT.md)
+* [Django - Url, Views](DJANGOINTRO.md)
+* [Django - models](MODELS.md)
+* [Django - forms](FORMS.md)
+* [Deployment](DEPLOY.md)
