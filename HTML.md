@@ -1,1 +1,5 @@
+---
+permalink: /html/
+---
+
 ini html
