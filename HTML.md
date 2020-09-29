@@ -1,5 +1,1 @@
----
-permalink: /html/
----
-
 ini html
