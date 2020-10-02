@@ -82,15 +82,15 @@ def profile(request):
   ...
 </head>
 <body>
-    {`%` if condition `%`}
+    { %  if condition  % }
         {{ coba }}
-    {`%` else `%`}
+    { %  else  % }
         {{ coba2 }}
-    {`%` endif `%`}
+    { %  endif  % }
 </body>
 </html>
 ```
-###### tips: don't forget to place "{`%` endif `%`}" to tell django that you have closed the if statement
+###### tips: don't forget to place "{ %  endif  % }" to tell django that you have closed the if statement
 
 ### looping
 
@@ -112,13 +112,13 @@ def profile(request):
   ...
 </head>
 <body>
-    {`%` for data in mylist `%`}
+    { %  for data in mylist  % }
         {{ data }}
-    {`%` endfor `%`}
+    { %  endfor  % }
 </body>
 </html>
 ```
-###### tips: don't forget to place "{`%` endfor `%`}" to tell django that you have closed the for loop
+###### tips: don't forget to place "{ %  endfor  % }" to tell django that you have closed the for loop
 
 #### you can play with json-like object or dictionary
 ##### views.py
@@ -146,11 +146,11 @@ def profile(request):
   ...
 </head>
 <body>
-    {`%` for people in peeps `%`}
+    { % for people in peeps  % }
         <h1> name: {{ people.name }} </h1>
         <h2> id: {{ people.id }}</h2>
         <h3> age: {{ people.age }}</h3>
-    {`%` endfor `%`}
+    { %  endfor  % }
 </body>
 </html>
 ```
