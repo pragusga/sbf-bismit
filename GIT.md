@@ -413,7 +413,7 @@ Pengenalan dengan Django
   Format dari django menggunakan **static**, jadi harus menambahkan **load static** di semua file yang menggunakan resource dari folder **static/** pada bagian paling atas. Contohnya seperti ini:
   ```html
   <!DOCTYPE html>
-  {% load static %}
+  "{% load static %}"
   <html lang="en">
     <head>
       <meta charset="utf-8">
