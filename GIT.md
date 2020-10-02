@@ -1,5 +1,5 @@
 AM/FM Week 2
-=============
+----
 
 ## Outline
 
@@ -13,7 +13,7 @@ AM/FM Week 2
   * cara menggunakan django
 
 Pengenalan dengan Git
-=====================
+----
 
 **git** adalah _version control system_ yang digunakan para developer untuk mengembangkan software secara bersama-bersama.
 Fungsi utama git yaitu mengatur versi dari source code program anda dengan mengasih tanda baris dan code mana yang ditambah atau diganti.
@@ -26,7 +26,7 @@ Apa itu **gitlab** / **github**? Apa perbedaannya?
 
 
 ## Install git
-
+----
 * Download
   * [Windows 64-bit](https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-64-bit.exe)
   * Linux (Ubuntu): `sudo apt install git`
@@ -34,7 +34,7 @@ Apa itu **gitlab** / **github**? Apa perbedaannya?
 
 
 ## Command-Command di CMD
-
+----
 * `cd` (change directory) : pindah ke luar atau ke dalam suatu folder
 * `dir` (directory?) : menampilkan list isi folder di posisi sekarang.
 * `mkdir <folder_name>` (make directory) : membuat folder baru
@@ -413,7 +413,7 @@ Pengenalan dengan Django
   Format dari django menggunakan **static**, jadi harus menambahkan `{ % load static % }` di semua file yang menggunakan resource dari folder **static/** pada bagian paling atas. Contohnya seperti ini:
   ```html
   <!DOCTYPE html>
-  `{ % load static % }`
+  { % load static % }
   <html lang="en">
     <head>
       <meta charset="utf-8">
