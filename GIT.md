@@ -1,4 +1,4 @@
-AM/FM Week 2
+Git and Environment
 ----
 
 ## Outline
