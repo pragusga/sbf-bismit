@@ -431,7 +431,7 @@ Pengenalan dengan Django
     ```
     menjadi:
     ```html
-    <link rel="stylesheet" href="{% static 'nama_file.css' %}">
+    <link rel="stylesheet" href="{persen static 'nama_file.css' persen}">
     ```
   * Gambar:\
     Awalnya:
@@ -440,7 +440,7 @@ Pengenalan dengan Django
     ```
     menjadi:
     ```html
-    <img src="{% static 'nama_gambar.jpg' %}">
+    <img src="{persen static 'nama_gambar.jpg' persen}">
     ```
   > Kalau menggunakan inline style, nggak perlu diapa-apain.
 * Url-url juga perlu diubah.\
@@ -451,8 +451,8 @@ Pengenalan dengan Django
   ```
   menjadi:
   ```html
-  <a href="{% url 'homepage:index' %}">...</a>
-  <a href="{% url 'homepage:profile' %}">...</a>
+  <a href="{persen url 'homepage:index' persen}">...</a>
+  <a href="{persen url 'homepage:profile' persen}">...</a>
   ```
   > `homepage` adalah **app_name** dari **homepage/urls.py**, sedangkan `index` dan `profil` adalah **name** dari path-path yang ada di `urlpatterns`.
 * Kalau kamu mencantumkan memasukkan gambar di **file.css**, misalkan\
