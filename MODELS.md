@@ -2,8 +2,8 @@
 
 ## Outline
 * Django Models
-  * [Membuat Class pada `models.py`](#membuat-class-pada-`homepage/models.py`)
-  * [Mendaftarkan Class pada `admin.py`](#mendaftarkan-class-pada-`homepage/admin.py`)
+  * [Membuat Class pada `models.py`](#membuat-class-pada-homepagemodelspy)
+  * [Mendaftarkan Class pada `admin.py`](#mendaftarkan-class-pada-homepageadminpy)
   * [Django CRUD (Create, Read, Update, Delete)](#Django-CRUD)
     * [Membuat Objek baru](#membuat-object-dari-model-yang-sudah-dibuat)
     * [Melihat Objek](#melihat-objek)
