@@ -9,7 +9,7 @@
     * [Melihat Objek](#melihat-objek)
     * [Mengedit Objek](#mengedit-objek)
     * [Menghapus Objek](#menghapus-objek)
-  * [Tabel Tipe Data](#tabel-tipe-Data)
+  * [Tabel Tipe Data](#tabel-tipe-data)
   * [Relationship Fields](#tabel-jenis-jenis-relationship)
 
 Membuat Class pada `homepage/models.py`
@@ -124,6 +124,7 @@ Menghapus objek
 >>> obj2.delete()
 ```
 Tabel tipe data
+---
 macam - macam field django diambil dari https://www.geeksforgeeks.org/django-model-data-types-and-fields-list/
 basic data types
 
@@ -139,6 +140,7 @@ basic data types
 | TextField     | A large text field. The default form widget for this field is a Textarea.                                            |
 more : https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types
 relationship fields
+
 Tabel jenis-jenis relationship 
 | Field name      | Description                                                                                                                                                                                               |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
