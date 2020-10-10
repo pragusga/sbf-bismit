@@ -1,4 +1,5 @@
 Git and Environment
+==
 ----
 
 ## Outline
@@ -13,7 +14,7 @@ Git and Environment
   * cara menggunakan django
 
 Pengenalan dengan Git
-----
+---
 
 **git** adalah _version control system_ yang digunakan para developer untuk mengembangkan software secara bersama-bersama.
 Fungsi utama git yaitu mengatur versi dari source code program anda dengan mengasih tanda baris dan code mana yang ditambah atau diganti.
@@ -164,7 +165,7 @@ Untuk melihat commit-commit yang pernah dilakukan
 
 * **https://learngitbranching.js.org/**
 
-
+<br>
 Pengenalan dengan Django
 ========================
 
@@ -335,6 +336,7 @@ Pengenalan dengan Django
   │   └── views.py
   ```
   > nama file html tidak harus persis sama.
+
 * buka file **homepage/views.py** kemudian buat fungsi baru di dalamnya, misal diberi nama **index(request)** .
   Ganti `nama_file.html` menjadi file sebenarnya.
   Formatnya seperti ini:
@@ -356,6 +358,7 @@ Pengenalan dengan Django
   # diteruskan...
   ```
   > Nama fungsinya bebas, tapi perlu diingat nama-namanya.
+
 * Lalu kamu akan mengatur routing url. caranya adalah dengan membuat file baru **homepage/urls.py**. isinya seperti ini:
   ```python
   from django.urls import path
@@ -431,7 +434,7 @@ Pengenalan dengan Django
     ```
     menjadi:
     ```html
-    <link rel="stylesheet" href="{persen static 'nama_file.css' persen}">
+    <link rel="stylesheet" href="{ %  static 'nama_file.css'  % }">
     ```
   * Gambar:\
     Awalnya:
@@ -440,7 +443,7 @@ Pengenalan dengan Django
     ```
     menjadi:
     ```html
-    <img src="{persen static 'nama_gambar.jpg' persen}">
+    <img src="{ %  static 'nama_gambar.jpg'  % }">
     ```
   > Kalau menggunakan inline style, nggak perlu diapa-apain.
 * Url-url juga perlu diubah.\
@@ -451,8 +454,8 @@ Pengenalan dengan Django
   ```
   menjadi:
   ```html
-  <a href="{persen url 'homepage:index' persen}">...</a>
-  <a href="{persen url 'homepage:profile' persen}">...</a>
+  <a href="{ %  url 'homepage:index'  % }">...</a>
+  <a href="{ %  url 'homepage:profile'  % }">...</a>
   ```
   > `homepage` adalah **app_name** dari **homepage/urls.py**, sedangkan `index` dan `profil` adalah **name** dari path-path yang ada di `urlpatterns`.
 * Kalau kamu mencantumkan memasukkan gambar di **file.css**, misalkan\
