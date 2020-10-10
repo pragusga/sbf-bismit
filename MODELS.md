@@ -2,17 +2,17 @@
 
 ## Outline
 * Django Models
-  * [Membuat Class pada `models.py`](#Membuat-Class-pada-models.py)
-  * [Mendaftarkan Class pada `admin.py`](#Mendaftarkan-Class-pada-admin.py)
+  * [Membuat Class pada `models.py`](#membuat-class-pada-`homepage/models.py`)
+  * [Mendaftarkan Class pada `admin.py`](#mendaftarkan-class-pada-`homepage/admin.py`)
   * [Django CRUD (Create, Read, Update, Delete)](#Django-CRUD)
-    * [Membuat Objek baru](#Membuat-object-dari-model-yang-sudah-dibuat)
-    * [Melihat Objek](#Melihat-objek)
-    * [Mengedit Objek](#Mengedit-objek)
-    * [Menghapus Objek](#Menghapus-objek)
-  * [Tabel Tipe Data](#Tabel-tipe-Data)
-  * [Relationship Fields](#Tabel-jenis-jenis-relationship)
+    * [Membuat Objek baru](#membuat-object-dari-model-yang-sudah-dibuat)
+    * [Melihat Objek](#melihat-objek)
+    * [Mengedit Objek](#mengedit-objek)
+    * [Menghapus Objek](#menghapus-objek)
+  * [Tabel Tipe Data](#tabel-tipe-Data)
+  * [Relationship Fields](#tabel-jenis-jenis-relationship)
 
-### Membuat Class pada `homepage/models.py`
+Membuat Class pada `homepage/models.py`
 ---
 ```python
 from django.db import models
@@ -29,7 +29,7 @@ Table homepage_myProfile
 | 1  | coba        | coba2@gmail.com       |
 | 2  | coba2       | coba2@gmail.com       |
 
-### Mendaftarkan Class pada `homepage/admin.py`
+Mendaftarkan Class pada `homepage/admin.py`
 ---
 Untuk membuat model dalam admin Django, kita perlu memodifikasi `homepage/admin.py`. Buka `admin.py` di homepage dan masukkan kode berikut. Impor model terkait dari `models.py` dan daftarkan ke antarmuka admin.
 
@@ -68,14 +68,15 @@ import class yang sudah di buat tadi di dalam folder app
 >>> from app.models import myProfile
 ```
 
-### Membuat object dari model yang sudah dibuat
-
+Membuat object dari model yang sudah dibuat
+---
 ```python
 >>> myProfile(username='coba', email='coba@gmail.com').save()
 >>> myProfile(username='coba2', email='coba2@gmail.com').save()
 ```
 
-### Melihat objek
+Melihat objek
+---
 query class yang sudah dibuat 
 
 ```python
@@ -108,7 +109,7 @@ maka melihat query akan lebih mudah
 <QuerySet [<myProfile: coba: coba@gmail.com>, <myProfile: coba2: coba2@gmail.com>]>
 ```
 
-### Mengedit objek
+Mengedit objek
 ---
 ```python
 >>> obj1 = myProfile.objects.get(id=1) #username:coba
@@ -116,13 +117,13 @@ maka melihat query akan lebih mudah
 >>> obj1.save()
 ```
 
-### Menghapus objek
+Menghapus objek
 ---
 ```python
 >>> obj2 = myProfile.onjects.get(id=2)
 >>> obj2.delete()
 ```
-### Tabel tipe data
+Tabel tipe data
 macam - macam field django diambil dari https://www.geeksforgeeks.org/django-model-data-types-and-fields-list/
 basic data types
 
@@ -138,7 +139,7 @@ basic data types
 | TextField     | A large text field. The default form widget for this field is a Textarea.                                            |
 more : https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types
 relationship fields
-### Tabel jenis-jenis relationship 
+Tabel jenis-jenis relationship 
 | Field name      | Description                                                                                                                                                                                               |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ForeignKey      | A many-to-one relationship. Requires two positional arguments: the class to which the model is related and the on_delete option.                                                                          |
