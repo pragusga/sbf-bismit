@@ -123,6 +123,7 @@ Menghapus objek
 >>> obj2 = myProfile.onjects.get(id=2)
 >>> obj2.delete()
 ```
+
 Tabel tipe data
 ---
 macam - macam field django diambil dari https://www.geeksforgeeks.org/django-model-data-types-and-fields-list/
@@ -142,6 +143,7 @@ more : https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types
 relationship fields
 
 Tabel jenis-jenis relationship 
+---
 | Field name      | Description                                                                                                                                                                                               |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ForeignKey      | A many-to-one relationship. Requires two positional arguments: the class to which the model is related and the on_delete option.                                                                          |
