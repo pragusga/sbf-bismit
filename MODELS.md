@@ -10,7 +10,7 @@
     * [Mengedit Objek](#mengedit-objek)
     * [Menghapus Objek](#menghapus-objek)
   * [Tabel Tipe Data](#tabel-tipe-data)
-  * [Relationship Fields](#tabel-jenis-jenis-relationship)
+  * [Relationship Fields](#tabel-jenis-jenis-relationship-)
 
 Membuat Class pada `homepage/models.py`
 ---
