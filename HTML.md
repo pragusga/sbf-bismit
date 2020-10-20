@@ -378,17 +378,6 @@ CSS Animation digunakan untuk mempermudah membuat animasi pada elemen HTML tanpa
 
 ![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img11.PNG)
 
-## Review HTML
-- HTML adalah kode standar dari sebuah halaman web, dimana elemen HTML ini digunakan untuk membuat konten pada halaman web.
-- Elemen HTML adalah konten dari halaman web, seperti : headings, paragraf, gambar, tabel, tautan (link), list dan lainnya.
-    ```
-    <h1> Welcome to Build a website Class </h1>
-    ```
-- Atribut HTML adalah informasi tambahan beserta dengan nilainya untuk elemen HTML 
-    ```
-    <a href="http://www.w3schools.com/html/html_elements.asp">HTML Elements</a>
-    ```
-
 ## Referensi
 * https://www.slideshare.net/ahmedhaque35/intro-to-twitter-bootstrap
 * https://www.slideshare.net/emkidwell/gdi-intro-to-html-css-class-2-final
