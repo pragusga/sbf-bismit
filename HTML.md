@@ -191,23 +191,24 @@ Elemen ```<div>``` adalah Block-level element. Fungsinya adalah untuk mengelompo
 ## Analogi HTML/CSS
 
 ### HTML
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img1.jpg) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img1.jpg) 
 
 ### HTML + CSS
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img2.png)
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img2.png)
 
 ### Contoh HTML
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img3.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img3.png) 
 
 ### Contoh HTML + CSS
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img4.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img4.png)
 
 ## Apakah itu CSS?
 CSS (Cascading Style Sheets) adalah kode/bahasa yang mendeskripsikan bagaimana elemen HTML ditampilkan pada layar. CSS mendeskripsikan pengaturan style, layout dan variasi tampilan di berbagai perangkat dan ukuran layar.
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img5.jpg) 
+
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img5.png) 
 
 ## Bagaimana Cara Mengaplikasikan CSS?
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img6.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img6.PNG) 
 
 ## Di mana kita menuliskan CSS?
 #### Inline
@@ -260,12 +261,13 @@ Contoh
 ```
 <a href= “https://www.w3schools.com”  id=“css-source” class=“link-default”>Klik disini</a>
 ```
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img12.PNG) 
+
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img12.PNG) 
 
 ## Analogi
 __Sedan__
 
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img7.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img7.png) 
 
 Untuk selector sedan:
 ```
@@ -280,7 +282,7 @@ Ini adalah contoh dari selector element!
 
 __Pink__
 
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img8.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img8.png) 
 
 Untuk selector mobil berwarna pink?
 ```
@@ -294,7 +296,7 @@ Ini adalah contoh dari selector class!
 
 __Nomor plat mobil__
 
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img9.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img9.png) 
 
 Untuk selector ID dengan nomor plat mobil sebagai berikut:
 ```
@@ -355,7 +357,7 @@ Id selector  digunakan untuk memilih elemen yang memiliki sebuah id yang unik, a
 ## Box Model
 Setiap elemen pada CSS adalah sebuah kotak.
 
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img10.png) 
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img10.png) 
 
 __Total Element Width__ = content width + left padding + right padding + left border + right border + left margin + right margin
 
@@ -374,7 +376,7 @@ CSS Animation digunakan untuk mempermudah membuat animasi pada elemen HTML tanpa
 2. Animasi ini harus diimplementasikan pada elemen HTML
 3. Durasi dari animasi harus ditentukan
 
-![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img11.PNG)
+![](https://gitlab.com/it-force/amfm/-/raw/master/gambar/img11.PNG)
 
 ## Review HTML
 - HTML adalah kode standar dari sebuah halaman web, dimana elemen HTML ini digunakan untuk membuat konten pada halaman web.
@@ -388,8 +390,7 @@ CSS Animation digunakan untuk mempermudah membuat animasi pada elemen HTML tanpa
     ```
 
 ## Referensi
-- https://www.slideshare.net/ahmedhaque35/intro-to-twitter-bootstrap
-- https://www.slideshare.net/emkidwell/gdi-intro-to-html-css-class-2-final
-- https://www.w3schools.com/
+* https://www.slideshare.net/ahmedhaque35/intro-to-twitter-bootstrap
+* https://www.slideshare.net/emkidwell/gdi-intro-to-html-css-class-2-final
 * https://www.w3schools.com/
 * https://www.petanikode.com/
