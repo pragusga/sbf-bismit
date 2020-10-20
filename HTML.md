@@ -33,13 +33,13 @@ Tag adalah penanda awalan dan akhiran sebuah elemen di html. Tag dibuat dengan k
 <h1>AM/FM</h1>
 <p>ITF Fuki</p>
 ```
-Tag                 | Fungsi
-------------------- | -----------------------------------
-```<html>```        | untuk memulai dokumen html
-```<head>```        | untuk membuat bagian head
-```<body>```        | untuk membuat bagian body
-```<h1> - <h6>```   | untuk membuat heading pada artikel
-```<p>```           | untuk membuat paragraf
+|Tag                 | Fungsi                               |
+|------------------- | -----------------------------------  |
+|```<html>```        | untuk memulai dokumen html           |
+|```<head>```        | untuk membuat bagian head            |
+|```<body>```        | untuk membuat bagian body            |
+|```<h1> - <h6>```   | untuk membuat heading pada artikel   |
+|```<p>```           | untuk membuat paragraf               |
 
 
 ## HTML Element
@@ -187,7 +187,209 @@ Elemen ```<div>``` adalah Block-level element. Fungsinya adalah untuk mengelompo
 </div>
 ```
 
+# CSS
+## Analogi HTML/CSS
 
-## Reference :
+### HTML
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img1.jpg) 
+
+### HTML + CSS
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img2.png)
+
+### Contoh HTML
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img3.png) 
+
+### Contoh HTML + CSS
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img4.png) 
+
+## Apakah itu CSS?
+CSS (Cascading Style Sheets) adalah kode/bahasa yang mendeskripsikan bagaimana elemen HTML ditampilkan pada layar. CSS mendeskripsikan pengaturan style, layout dan variasi tampilan di berbagai perangkat dan ukuran layar.
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img5.jpg) 
+
+## Bagaimana Cara Mengaplikasikan CSS?
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img6.png) 
+
+## Di mana kita menuliskan CSS?
+#### Inline
+- Inline CSS ini diletakan langsung pada elemen HTML sebagai atribut, sehingga tidak membutuhkan selektor lagi
+- Hanya dapat digunakan untuk elemen HTML yang telah didefinisikan
+- Direkomendasikan jika ingin menimpa aturan style global yang telah ditetapkan
+
+```
+<p style="color: blue">Hi Rookies!</p>
+```
+#### Internal
+- Internal CSS didefinisikan pada <head> dokumen HTML menggunakan elemen <style>
+
+```
+<head>
+    <style>
+    p{
+        color: blue;
+    }
+   </style>
+</head>
+<body>
+    <p>Hi Rookies!</p>
+</body>
+```
+
+Bagaimana jika CSS nya banyak? Tentu tidak terlihat bagus karena menumpuk pada satu file HTML! 
+Di mana kita menuliskan CSS?
+
+#### External
+index.html
+```
+<head>
+    <link rel="stylesheet"type="text/css" href="style.css">
+</head>
+<body>
+    <p>Hi, Rookies!</p>
+</body>
+```
+style.css
+```
+p {
+    color: blue;
+}
+```
+## CSS Selector
+CSS Selectors digunakan untuk memilih elemen HTML yang akan diberikan style berdasarkan element tags, id, kelas, attribute dan lain sebagainya.
+
+Contoh
+```
+<a href= “https://www.w3schools.com”  id=“css-source” class=“link-default”>Klik disini</a>
+```
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img12.PNG) 
+
+## Analogi
+__Sedan__
+
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img7.png) 
+
+Untuk selector sedan:
+```
+sedan {
+    ...
+}
+```
+Ini adalah contoh dari selector element!
+
+##
+
+
+__Pink__
+
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img8.png) 
+
+Untuk selector mobil berwarna pink?
+```
+.pink {
+    ...
+}
+```
+Ini adalah contoh dari selector class! 
+
+##
+
+__Nomor plat mobil__
+
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img9.png) 
+
+Untuk selector ID dengan nomor plat mobil sebagai berikut:
+```
+#123xyz {
+    ...
+}
+```
+Ini adalah contoh dari selector ID! 
+
+#### Element Selector
+Element selectors akan memilih semua elemen yang memiliki tags yang sama pada dokumen.
+```
+a {
+  font-size: 18px;
+text-align: justify; 
+}
+```
+
+#### Class Selector
+Class selectors akan memilih elemen yang memiliki atribut kelas yang spesifik. Kelas ini dapat dimiliki oleh beberapa elemen dan sebuah elemen pun dapat memiliki beberapa kelas.
+```
+.link-default {
+    font-color: red; 
+  line-height: 1.5em;
+} 
+```
+
+#### Id Selectors
+
+Id selector  digunakan untuk memilih elemen yang memiliki sebuah id yang unik, artinya id ini hanya dapat dimiliki oleh satu elemen saja.
+```
+#css-source {
+  font-family: cursive;
+  text-decoration: none;
+} 
+```
+
+## Beberapa atribut CSS yang biasa digunakan
+##### Font
+- Color: #RRGGBB, red, blue, green
+- Font-size: %, px, pt, em 
+- Font-family:  Arial, calibri
+- Font-style: Normal, italic
+- Font-weight: Normal, bold
+
+##### Background
+- Background-color: #RRGGBB, red, blue, green
+- Background-image: url(“image url”)
+
+##### Sizing-Element
+- Height : %, px, vh
+- Width : %, px, vw
+
+##### Border
+- Border-color : red, #RRGGBB
+- Border-style : solid, dotted
+
+## Box Model
+Setiap elemen pada CSS adalah sebuah kotak.
+
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img10.png) 
+
+__Total Element Width__ = content width + left padding + right padding + left border + right border + left margin + right margin
+
+__Total Element Height__ = content height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+- Height: tinggi dari konten
+- Width: lebar dari konten
+- Padding: jarak antara konten dengan border
+- Border: batas luar dari sebuah elemen
+- Margin: jarak antara elemen satu dengan lainnya
+- Box-sizing: border-box
+
+## CSS Animation
+CSS Animation digunakan untuk mempermudah membuat animasi pada elemen HTML tanpa bantuan dari kode Javascript atau Flash. Aturan dasar dari CSS Animation, adalah :
+1. Aturan animasi yang dibuat harus didefinisikan pada @keyframe
+2. Animasi ini harus diimplementasikan pada elemen HTML
+3. Durasi dari animasi harus ditentukan
+
+![](https://gitlab.com/it-force/amfm/-/blob/master/gambar/img11.PNG)
+
+## Review HTML
+- HTML adalah kode standar dari sebuah halaman web, dimana elemen HTML ini digunakan untuk membuat konten pada halaman web.
+- Elemen HTML adalah konten dari halaman web, seperti : headings, paragraf, gambar, tabel, tautan (link), list dan lainnya.
+    ```
+    <h1> Welcome to Build a website Class </h1>
+    ```
+- Atribut HTML adalah informasi tambahan beserta dengan nilainya untuk elemen HTML 
+    ```
+    <a href="http://www.w3schools.com/html/html_elements.asp">HTML Elements</a>
+    ```
+
+## Referensi
+- https://www.slideshare.net/ahmedhaque35/intro-to-twitter-bootstrap
+- https://www.slideshare.net/emkidwell/gdi-intro-to-html-css-class-2-final
+- https://www.w3schools.com/
 * https://www.w3schools.com/
 * https://www.petanikode.com/
