@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [HTML,CSS](HTML.md)
+* [HTML, CSS](HTML.md)
 * [Git and environment](GIT.md)
 * [Django - Url, Views](DJANGO_INTRO.md)
 * [Django - models](MODELS.md)
