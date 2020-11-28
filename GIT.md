@@ -413,10 +413,10 @@ Pengenalan dengan Django
   │   └── ...
   ```
 * Lalu kamu harus membuka **semua file html** yang menggunakan css dan gambar untuk menyesuaikan dengan penulisan Django.
-  Format dari django menggunakan **static**, jadi harus menambahkan `{\% load static \%}` di semua file yang menggunakan resource dari folder **static/** pada bagian paling atas. Contohnya seperti ini:
+  Format dari django menggunakan **static**, jadi harus menambahkan `{% load static %}` di semua file yang menggunakan resource dari folder **static/** pada bagian paling atas. Contohnya seperti ini:
   ```html
   <!DOCTYPE html>
-  {\% load static \%}
+  { % load static % }
   <html lang="en">
     <head>
       <meta charset="utf-8">
@@ -434,7 +434,7 @@ Pengenalan dengan Django
     ```
     menjadi:
     ```html
-    <link rel="stylesheet" href="{\%  static 'nama_file.css'  \%}">
+    <link rel="stylesheet" href="{ %  static 'nama_file.css'  % }">
     ```
   * Gambar:\
     Awalnya:
@@ -443,7 +443,7 @@ Pengenalan dengan Django
     ```
     menjadi:
     ```html
-    <img src="{\%  static 'nama_gambar.jpg'  \%}">
+    <img src="{ %  static 'nama_gambar.jpg'  % }">
     ```
   > Kalau menggunakan inline style, nggak perlu diapa-apain.
 * Url-url juga perlu diubah.\
@@ -454,8 +454,8 @@ Pengenalan dengan Django
   ```
   menjadi:
   ```html
-  <a href="{\%  url 'homepage:index'  \%}">...</a>
-  <a href="{\%  url 'homepage:profile'  \%}">...</a>
+  <a href="{ %  url 'homepage:index'  % }">...</a>
+  <a href="{ %  url 'homepage:profile'  % }">...</a>
   ```
   > `homepage` adalah **app_name** dari **homepage/urls.py**, sedangkan `index` dan `profil` adalah **name** dari path-path yang ada di `urlpatterns`.
 * Kalau kamu mencantumkan memasukkan gambar di **file.css**, misalkan\
