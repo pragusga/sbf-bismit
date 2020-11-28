@@ -216,23 +216,23 @@ CSS (Cascading Style Sheets) adalah kode/bahasa yang mendeskripsikan bagaimana e
 - Hanya dapat digunakan untuk elemen HTML yang telah didefinisikan
 - Direkomendasikan jika ingin menimpa aturan style global yang telah ditetapkan
 
-```
+```html
 <p style="color: blue">Hi Rookies!</p>
 ```
 #### Internal
 - Internal CSS didefinisikan pada <head> dokumen HTML menggunakan elemen <style>
 
-```
-<head>
-    <style>
-    p{
-        color: blue;
-    }
-   </style>
-</head>
-<body>
-    <p>Hi Rookies!</p>
-</body>
+```html
+  <head>
+      <style>
+      p{
+          color: blue;
+      }
+    </style>
+  </head>
+  <body>
+      <p>Hi Rookies!</p>
+  </body>
 ```
 
 Bagaimana jika CSS nya banyak? Tentu tidak terlihat bagus karena menumpuk pada satu file HTML! 
