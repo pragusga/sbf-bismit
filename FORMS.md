@@ -4,7 +4,7 @@
 - [Forms in Django 🤠](#forms-in-django-)
   - [Outline](#outline)
   - [Regular forms vs Django forms](#regular-forms-vs-django-forms)
-  - [How-tos (**forms.Form API**)](#how-tos-formsform-api)
+  - [How-tos: **forms.Form API**](#how-tos-formsform-api)
   - [Introducing: **forms.ModelForm API**](#introducing-formsmodelform-api)
   - [Working with Form Templates](#working-with-form-templates)
   - [Each Models Field Correspondation For forms.ModelForm](#each-models-field-correspondation-for-formsmodelform)
@@ -88,7 +88,7 @@ Say you want to create a form that asks a person's favourite subjects
     {% endraw %}
     ```
 
-How-tos (**forms.Form API**)
+How-tos: **forms.Form API**
 ---
 This section will explain on how you could utilize Django forms API to build a simple **facebook-like timeline status form**.
 
@@ -153,7 +153,6 @@ This section will explain on how you could utilize Django forms API to build a s
         name = forms.CharField(max_length=55)
         status = forms.CharField(widget=forms.Textarea)
     ```
-
 
 5. **Implement the `views.py`**
     <br/> Add the following lines on your `views.py`
@@ -437,12 +436,10 @@ Working with Form Templates
 1. **Form rendering options**
     There are other output options though for the `<label>/<input>` pairs:
 
-    {% raw %}
-    * **{{ form.as_table }}** will render them as table cells wrapped in `<tr>` tags
-    * **{{ form.as_p }}** will render them wrapped in `<p>` tags
-    * **{{ form.as_ul }}** will render them wrapped in `<li>` tags
+    * **{% raw %}{{ form.as_table }}{% endraw %}** will render them as table cells wrapped in `<tr>` tags
+    * **{% raw %}{{ form.as_p }}{% endraw %}** will render them wrapped in `<p>` tags
+    * **{% raw %}{{ form.as_ul }}{% endraw %}** will render them wrapped in `<li>` tags
     Note that you’ll have to provide the surrounding `<table>` or `<ul>` elements yourself.
-    {% endraw %}
 
 2. **Rendering fields manually**
     <br/> Oh, you can render your own form manually using for loops too. cool beans right!
