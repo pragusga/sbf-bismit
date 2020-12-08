@@ -1,6 +1,14 @@
 # Deploying a Django app on heroku
 
 ## Outline
+- [Deploying a Django app on heroku](#deploying-a-django-app-on-heroku)
+  - [Outline](#outline)
+  - [Create a new heroku account](#create-a-new-heroku-account)
+  - [Installing Dependencies](#installing-dependencies)
+  - [Configure `settings.py`](#configure-settingspy)
+  - [Add `Procfile` & `.gitlab-ci.yml`](#add-procfile--gitlab-ciyml)
+  - [Create new app on heroku](#create-new-app-on-heroku)
+  - [Setup Gitlab CI/Pipeline](#setup-gitlab-cipipeline)
 
 Create a new heroku account
 ---
