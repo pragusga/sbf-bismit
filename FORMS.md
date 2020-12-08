@@ -26,7 +26,7 @@ Say you want to create a form that asks a person's favourite subjects
     <br/> And the implementation on your html should be pretty much like this
 
     di template (`forms.html`):
-    ```
+    ```html
     <p>Favorite Subject:</p>
 
     <form action="#" method="post">
@@ -55,7 +55,7 @@ Say you want to create a form that asks a person's favourite subjects
     <br/> Meanwhile if you use Django built-in form...
 
     di `forms.py`
-    ```
+    ```py
     from django import forms
     from django.forms.widgets import CheckboxSelectMultiple
 
@@ -77,7 +77,7 @@ Say you want to create a form that asks a person's favourite subjects
     ```
 
     <br/> di template (`forms.html`):
-    ```
+    ```html
     {% raw %}
     <form action="#" method="post">
         {% csrf_token %}
@@ -97,7 +97,7 @@ This section will explain on how you could utilize Django forms API to build a s
 1. **Create new app**
     <br/> You know the drill, run the startapp command on your terminal (make sure you have activated your env)
 
-    ```
+    ```bash
     $ python manage.py startapp status
     ```
 
@@ -107,7 +107,7 @@ This section will explain on how you could utilize Django forms API to build a s
     <br/> This also has been done before, the pinpoints are to **add 'status' to INSTALLED_APPS on `settings.py`** and then **create and include the `urls.py` config inside the status app folder into your root `urls.py`**
 
     Status app `urls.py` configuration
-    ```
+    ```py
     from django.urls import path
     from . import views
 
@@ -124,7 +124,7 @@ This section will explain on how you could utilize Django forms API to build a s
 3. **Set-up `models.py`**
     <br/> Say we're making a form that asks name and status. So, we need to build a models class that represents the database's table.
 
-    ```
+    ```py
     from django.db import models
 
     # Create your models here.
@@ -137,17 +137,17 @@ This section will explain on how you could utilize Django forms API to build a s
     <br/> Django doesn't have `forms.py` right out the moment you create a new app. So you have to add it manually
 
     ps: you can add new file on **windows** using this command
-    ```
+    ```bash
     $ echo. > forms.py
     ```
 
     or if you use **mac os/linux**
-    ```
+    ```bash
     $ touch forms.py
     ```
 
     And then, proceed to add the following lines on your `forms.py`
-    ```
+    ```py
     from django import forms
 
     class NameForm(forms.Form):
@@ -159,7 +159,7 @@ This section will explain on how you could utilize Django forms API to build a s
 5. **Implement the `views.py`**
     <br/> Add the following lines on your `views.py`
 
-    ```
+    ```py
     from django.http import HttpResponseRedirect
     from django.shortcuts import render
 
@@ -226,7 +226,7 @@ This section will explain on how you could utilize Django forms API to build a s
 
     And then proceed to add the following lines to `status.html` file that you just created
 
-    ```
+    ```html
     {% raw %}
     <!DOCTYPE html>
     {% load static %}
@@ -257,7 +257,7 @@ This section will explain on how you could utilize Django forms API to build a s
 7. **Try it out!**
     <br/> It should work as of now, but don't forget to run make migrations & migrate commands since you just added a new models.
 
-    ```
+    ```bash
     $ python manage.py makemigrations
     $ python manage.py migrate
     ```
@@ -266,7 +266,7 @@ This section will explain on how you could utilize Django forms API to build a s
 
     And finally, you can run the program and see whether the form & models are working!
 
-    ```
+    ```bash
     $ python manage.py runserver
     ```
 
@@ -290,7 +290,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
 1. **Create new app**
     <br/> You know the drill, run the startapp command on your terminal (make sure you have activated your env)
 
-    ```
+    ```bash
     $ python manage.py startapp biodata
     ```
 
@@ -298,7 +298,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
     <br/> This also has been done before, the pinpoints are to **add 'status' to INSTALLED_APPS on `settings.py`** and then **create and include the `urls.py` config inside the status app folder into your root `urls.py`**
 
     Status app `urls.py` configuration
-    ```
+    ```py
     from django.urls import path
     from . import views
 
@@ -314,7 +314,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
 3. **Set-up `models.py`**
     <br/> Since we're making a biodata form. I want my form and models/database to be able to store as much information of the visitor/respondents as possible.
 
-    ```
+    ```py
     from django.db import models
 
     # Create your models here.
@@ -334,7 +334,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
 4. **Create the form on `forms.py`**
     <br/> Note: Don't forget to create a new `forms.py` inside your biodata app folder!
 
-    ```
+    ```py
     from django import forms
 
     from .models import Biodata
@@ -353,7 +353,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
  5. **Implement the `views.py`**
     <br/> Add the following lines on your `views.py`
 
-    ```
+    ```py
     from django.shortcuts import render, redirect
 
     # Import forms & models
@@ -385,7 +385,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
 
     And the inside of your `biodata.html` should look like this
 
-    ```
+    ```html
     {% raw %}
     <!DOCTYPE html>
     {% load static %}
@@ -447,7 +447,7 @@ Working with Form Templates
     <br/> Oh, you can render your own form manually using for loops too. cool beans right!
     This allows for more flexibilty and customization towards how you would like to display your forms.
 
-    ```
+    ```py
     {% raw %}
     {% for field in form %}
         <div class="fieldWrapper">
