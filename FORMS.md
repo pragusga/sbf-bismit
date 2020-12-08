@@ -78,12 +78,14 @@ Say you want to create a form that asks a person's favourite subjects
 
     <br/> di template (`forms.html`):
     ```
+    {% raw %}
     <form action="#" method="post">
         {% csrf_token %}
         {{ form }}
 
         <input type="submit" disabled="disabled">
     </form>
+    {% endraw %}
     ```
 
 How-tos (**forms.Form API**)
@@ -225,6 +227,7 @@ This section will explain on how you could utilize Django forms API to build a s
     And then proceed to add the following lines to `status.html` file that you just created
 
     ```
+    {% raw %}
     <!DOCTYPE html>
     {% load static %}
     <html lang="en">
@@ -249,6 +252,7 @@ This section will explain on how you could utilize Django forms API to build a s
         </div>
     </body>
     </html>
+    {% endraw %}
     ```
 7. Try it out!
     <br/> It should work as of now, but don't forget to run make migrations & migrate commands since you just added a new models.
@@ -382,6 +386,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
     And the inside of your `biodata.html` should look like this
 
     ```
+    {% raw %}
     <!DOCTYPE html>
     {% load static %}
     <html lang="en">
@@ -416,6 +421,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
         </div>
     </body>
     </html>
+    {% endraw %}
     ```
 
 7. Try it out!
@@ -442,6 +448,7 @@ Working with Form Templates
     This allows for more flexibilty and customization towards how you would like to display your forms.
 
     ```
+    {% raw %}
     {% for field in form %}
         <div class="fieldWrapper">
             {{ field.errors }}
@@ -451,6 +458,7 @@ Working with Form Templates
             {% endif %}
         </div>
     {% endfor %}
+    {% endraw %}
     ```
 
 Each Models Field Correspondation For forms.ModelForm
