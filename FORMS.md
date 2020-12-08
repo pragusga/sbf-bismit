@@ -120,7 +120,6 @@ This section will explain on how you could utilize Django forms API to build a s
 
     Kalo lupa bisa dicek disini yaaw https://it-force.gitlab.io/amfm/GIT.html#aplikasi-django-pertama
 
-
 3. **Set-up `models.py`**
     <br/> Say we're making a form that asks name and status. So, we need to build a models class that represents the database's table.
 
@@ -438,10 +437,12 @@ Working with Form Templates
 1. **Form rendering options**
     There are other output options though for the `<label>/<input>` pairs:
 
+    {% raw %}
     * **{{ form.as_table }}** will render them as table cells wrapped in `<tr>` tags
     * **{{ form.as_p }}** will render them wrapped in `<p>` tags
     * **{{ form.as_ul }}** will render them wrapped in `<li>` tags
     Note that you’ll have to provide the surrounding `<table>` or `<ul>` elements yourself.
+    {% endraw %}
 
 2. **Rendering fields manually**
     <br/> Oh, you can render your own form manually using for loops too. cool beans right!
