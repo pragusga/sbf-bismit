@@ -6,7 +6,7 @@ Create a new heroku account
 ---
 Quoting from heroku's website: *"Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud."*. In layman's term, heroku allows you to deploy your web application written in any languages ranging from python to php.
 
-https://signup.heroku.com/
+To use heroku, you must first sign up (duh) by visiting this link: https://signup.heroku.com/
 
 Installing Dependencies
 ---
@@ -16,7 +16,7 @@ In order for your Django app to work on a heroku deployment environment, you fir
 $ pip install whitenoise gunicorn dj-database-url psycopg2
 ```
 
-And in any web app framework, everytime you add/remove a dependencies, you need to update your package manager. Which in Python's case, the package manager is pip, and all the installed packages metadata are being tracked on your `requirements.txt` file.
+And as in any web app framework, everytime you add/remove a dependencies, you need to update your package manager. Which in Python's case, the package manager is `pip`, and all the installed packages metadata are being tracked on your `requirements.txt` file.
 
 So, you need to update your requirements.txt (since you just added new packages to your proejct's pip) by running the command below
 ```bash
@@ -37,7 +37,7 @@ Configure `settings.py`
 ---
 After installing the required packages, you need to "integrate" those packages to your Django project by adding some lines to your `settings.py` file.
 
-You can follow these steps below upon configuring your `settings.py` file
+You can follow these steps below to configure your `settings.py` file
 1. **import os and dj-database-url**
     <br/> add the following lines just below the `from pathlb import Path` line
     ```py
@@ -84,7 +84,7 @@ You can follow these steps below upon configuring your `settings.py` file
     Note: It is to be noted that `django.middleware.security.SecurityMiddleware` need to stay on top/index 0 within the `MIDDLEWARE` list
 
 4. **set up production database**
-    <br/> Django is using sqlite3 as its default database system, but heroku deployment environment does not support sqlite3. So, in order to have your database works on deployment, you need to make an adjustment about which database to use when on local and on production. This is where psycopg2 and dj-database-url comes into play
+    <br/> Django uses sqlite3 as its default database system, but heroku deployment environment does not support sqlite3. So, in order to have your database works on deployment, you need to make an adjustment about which database to use when on local and on production. This is where psycopg2 and dj-database-url comes into play
 
     Below your `DATABASES` config on `settings.py`, add the following lines:
     ```py
@@ -243,7 +243,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ```
 
-Yang baru ditambah/di-edit ditandai dengan komentar NEW atau EDIT. Kalau sudah sama, kamu bisa proceed ke langkah selanjutnya :D
+Yang barusan ditambah/di-edit ditandai dengan komentar NEW atau EDIT. Kalau sudah sama, kamu bisa proceed ke langkah selanjutnya :D
 
 Add `Procfile` & `.gitlab-ci.yml`
 ---
@@ -253,7 +253,7 @@ Create two new files with the name `Procfile` (yes, only "Procfile", no file ext
 
 Add the following line to your `Procfile`
 ```Procfile
-web: gunicorn amfm.wsgi —-log-file -
+web: gunicorn amfm.wsgi --log-file -
 ```
 Note: note that amfm on "amfm.wsgi" above is the project name in this example case. So you should adjust it in accordance to your project name.
 
@@ -289,6 +289,8 @@ In order for your heroku and gitlab to be connected, you need to set up a set of
 1. Go to your gitlab repository. On the sidebar, go to Settings -> CI/CD -> Variables
 2. Add exactly three variables, with each specification follows the instruction below
    - Key = HEROKU_APIKEY; Variable = (check on your heroku account settings to get API Key)
-   - Key = HEROKU_APPNAME; Variable = (the name of your heroku app that you just created earlier)
-   - Key = HEROKU_APP_HOST; Variable = <HEROKU_APPNAME>.herokuapp.com
-3. Go check your app dashboard on dashboard.heroku.com. There should be a new running process/pipeline. Wait until it's done, and voila! you have successfully deployed your Django application :D
+   - Key = HEROKU_APPNAME; Variable = YOUR_APP_NAME
+   - Key = HEROKU_APP_HOST; Variable = YOUR_APP_NAME.herokuapp.com
+**YOUR_APP_NAME**: (the name of your heroku app that you created earlier)
+
+1. Go check your app dashboard on dashboard.heroku.com. There should be a new running process/pipeline. Wait until it's done, and voila! you have successfully deployed your Django application :D
