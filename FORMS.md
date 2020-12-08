@@ -16,13 +16,13 @@ Let's have a look on an example of a regular forms: **Multiple Choices using Che
 
 Say you want to create a form that asks a person's favourite subjects
 
-1. Expected Results:
+1. **Expected Results:**
     <br/> You want the form to be more or less like this
 
     ![subject form example]('./../gambar/img13.png)
 
 
-2. HTML Code:
+2. **HTML Code:**
     <br/> And the implementation on your html should be pretty much like this
 
     di template (`forms.html`):
@@ -51,7 +51,7 @@ Say you want to create a form that asks a person's favourite subjects
 
     Imagine having 10++ choices on the form, or you still have to add another fields in the form. Meaning that you'd have to re-do the input & label for each choices 🤮
 
-3. Django Forms:
+3. **Django Forms:**
     <br/> Meanwhile if you use Django built-in form...
 
     di `forms.py`
@@ -94,7 +94,7 @@ This section will explain on how you could utilize Django forms API to build a s
 
 **Note: only do step 1 & 2 if you haven't added the model from last week's session**
 
-1. Create new app
+1. **Create new app**
     <br/> You know the drill, run the startapp command on your terminal (make sure you have activated your env)
 
     ```
@@ -103,7 +103,7 @@ This section will explain on how you could utilize Django forms API to build a s
 
     Note that you can name the app however you want, but in this case i'm gonna use the name "status" (as in facebook's status 😉)
 
-2. Initial setup for the status app
+2. **Initial setup for the status app**
     <br/> This also has been done before, the pinpoints are to **add 'status' to INSTALLED_APPS on `settings.py`** and then **create and include the `urls.py` config inside the status app folder into your root `urls.py`**
 
     Status app `urls.py` configuration
@@ -121,7 +121,7 @@ This section will explain on how you could utilize Django forms API to build a s
     Kalo lupa bisa dicek disini yaaw https://it-force.gitlab.io/amfm/GIT.html#aplikasi-django-pertama
 
 
-3. Set-up `models.py`
+3. **Set-up `models.py`**
     <br/> Say we're making a form that asks name and status. So, we need to build a models class that represents the database's table.
 
     ```
@@ -133,7 +133,7 @@ This section will explain on how you could utilize Django forms API to build a s
         status = models.TextField()
     ```
 
-4. Create the form on `forms.py`
+4. **Create the form on `forms.py`**
     <br/> Django doesn't have `forms.py` right out the moment you create a new app. So you have to add it manually
 
     ps: you can add new file on **windows** using this command
@@ -156,7 +156,7 @@ This section will explain on how you could utilize Django forms API to build a s
     ```
 
 
-5. Implement the `views.py`
+5. **Implement the `views.py`**
     <br/> Add the following lines on your `views.py`
 
     ```
@@ -198,7 +198,7 @@ This section will explain on how you could utilize Django forms API to build a s
         return render(request, 'status/status.html', context)
     ```
 
-6. Templating (say our template file name is `status.html`)
+6. **Templating (say our template file name is `status.html`)**
     <br/> First, you need to create a new html file inside the app folder. The inside of your status app directory should look as displayed below.
 
     ```
@@ -254,7 +254,7 @@ This section will explain on how you could utilize Django forms API to build a s
     </html>
     {% endraw %}
     ```
-7. Try it out!
+7. **Try it out!**
     <br/> It should work as of now, but don't forget to run make migrations & migrate commands since you just added a new models.
 
     ```
@@ -285,16 +285,16 @@ Now here's where **forms.ModelForm** comes into play. To put it simply, forms.Mo
 
 Here's an example of **forms.ModelForm implementation on making a biodata form**.
 
-**Note: The first and second steps are about the same as the forms.Form steps on the previous section** 
+**Note: The first and second steps are about the same as the `forms.Form` steps on the previous section** 
 
-1. Create new app
+1. **Create new app**
     <br/> You know the drill, run the startapp command on your terminal (make sure you have activated your env)
 
     ```
     $ python manage.py startapp biodata
     ```
 
-2. Initial setup for the status app
+2. **Initial setup for the status app**
     <br/> This also has been done before, the pinpoints are to **add 'status' to INSTALLED_APPS on `settings.py`** and then **create and include the `urls.py` config inside the status app folder into your root `urls.py`**
 
     Status app `urls.py` configuration
@@ -311,7 +311,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
 
     Kalo lupa bisa dicek disini yaaw https://it-force.gitlab.io/amfm/GIT.html#aplikasi-django-pertama
 
-3. Set-up `models.py`
+3. **Set-up `models.py`**
     <br/> Since we're making a biodata form. I want my form and models/database to be able to store as much information of the visitor/respondents as possible.
 
     ```
@@ -331,7 +331,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
         number_of_siblings = models.PositiveSmallIntegerField()
     ```
 
-4. Create the form on `forms.py`
+4. **Create the form on `forms.py`**
     <br/> Note: Don't forget to create a new `forms.py` inside your biodata app folder!
 
     ```
@@ -350,7 +350,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
             }
     ```
 
- 5. Implement the `views.py`
+ 5. **Implement the `views.py`**
     <br/> Add the following lines on your `views.py`
 
     ```
@@ -380,7 +380,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
         return render(request, 'biodata/biodata.html', context)
     ```
 
-6. Templating (say our template file name is `biodata.html`)
+6. **Templating (say our template file name is `biodata.html`)**
     <br/> The approach to create a new templates folder and `biodata.html` is basically the same as what's in the previous (forms.Form) section
 
     And the inside of your `biodata.html` should look like this
@@ -424,7 +424,7 @@ Here's an example of **forms.ModelForm implementation on making a biodata form**
     {% endraw %}
     ```
 
-7. Try it out!
+7. **Try it out!**
     <br/> It's the regular makemigrations -> migrate -> runserver. You should be familiar with all of these steps as of now 😉
 
     Your page (/biodata) should pretty much look like this. Again, it's still plain html and no css involved yet. Hence you are free to style your biodata page however you wish :D
@@ -435,7 +435,7 @@ Working with Form Templates
 
 *Note: The following materials are adapted from https://docs.djangoproject.com/en/3.1/topics/forms/#working-with-form-templates*
 
-1. Form rendering options
+1. **Form rendering options**
     There are other output options though for the `<label>/<input>` pairs:
 
     * **{{ form.as_table }}** will render them as table cells wrapped in `<tr>` tags
@@ -443,7 +443,7 @@ Working with Form Templates
     * **{{ form.as_ul }}** will render them wrapped in `<li>` tags
     Note that you’ll have to provide the surrounding `<table>` or `<ul>` elements yourself.
 
-2. Rendering fields manually
+2. **Rendering fields manually**
     <br/> Oh, you can render your own form manually using for loops too. cool beans right!
     This allows for more flexibilty and customization towards how you would like to display your forms.
 
@@ -502,4 +502,4 @@ The generated Form class will have a form field for every model field specified,
 | **URLField**              | URLField                                                                                                |
 | UUIDField                 | UUIDField                                                                                               |
 
-The highlighted fields are the ones you'd meet more often (relatively, based on my experience)
+The highlighted fields are the ones you'd meet more often (relatively, based on my own humble experience)
