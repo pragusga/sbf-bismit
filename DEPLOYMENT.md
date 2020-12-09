@@ -279,7 +279,7 @@ Deployment:
   script:
     - dpl --provider=heroku --app=$HEROKU_APPNAME --api-key=$HEROKU_APIKEY
     - export HEROKU_API_KEY=$HEROKU_APIKEY
-    - heroku run --app $HEROKU_APPNAME migrate
+    - heroku run --app $HEROKU_APPNAME python manage.py migrate
   environment:
     name: production
     url: $HEROKU_APP_HOST
